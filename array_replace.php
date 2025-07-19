@@ -169,7 +169,7 @@ echo "</pre>";
 
     $fruits = ["apple", "banana", "orange", "mango", "grapes"];
 
-$slice = array_slice($fruits, 1,3 ,true);
+$slice = array_slice($fruits, 0,3,true );
 echo "<pre>";
 print_r($slice);
 echo "</pre>";
@@ -178,7 +178,7 @@ echo "</pre>";
    //array_splice
    $fruits = ["apple", "banana", "orange", "mango", "grapes"];
 
-array_splice($fruits, 0, 2 ,true);
+array_splice($fruits, 0, 1 );
 
 echo "<pre>";
   print_r($fruits);
@@ -189,7 +189,7 @@ echo "</pre>";
 
 $color = ['red', 'pink', 'green', 'blue'];
     
-array_splice($color,-1,1);
+array_splice($color,1,2);
   
 echo "<pre>";
   print_r($color);
@@ -197,14 +197,12 @@ echo "</pre>";
 
    $colors = ['red', 'pink', 'green', 'blue'];
 
-   $fruit = ['apple', 'orange'];
+   $fruit = ['apple', 'orange','banana'];
 
-//    array_splice($colors,1,2, $fruit);
 
- //   array_splice($colors,2,count($colors), $fruit);
     array_splice($colors,count($colors),0, $fruit);
    
-    //array_splice($colors,1,0, $fruit);
+   
 
    echo "<pre>";
   print_r($colors);

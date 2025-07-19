@@ -93,7 +93,7 @@ $a=array(
 );
 
 $newArray=array_flip($a);// array_flip(): $a array ke keys aur values ko ulta kar deta hai. 
-$newarray=array_change_key_case($a,CASE_LOWER);// array ke saare keys ko lowercase (chhote akshar) mein convert kar deta hai.
+$newarray=array_change_key_case($a,CASE_UPPER);// array ke saare keys ko lowercase (chhote akshar) mein convert kar deta hai.
 
 echo "<pre>";
 print_r($newArray);
@@ -121,24 +121,29 @@ echo $product;
 
  $A=array("red","blue","green","pink","orange");
  
- $random=array_rand($A,2);
+ $random=array_rand($A,4);
 
   echo "<pre>";
   print_r($random);
   echo "</pre>";
 
   echo $A[$random[0]] . "<br>";
-   echo $A[$random[1]];
+   echo $A[$random[1]] . "<br>";
+    echo $A[$random[2]] . "<br>";
+   echo $A[$random[3]];
+
 
  
-$fruits =array ("a" => "Apple", "b" => "Banana", "c" => "Cherry", "d" => "Date");
+$fruits = array("a" => "Apple", "b" => "Banana", "c" => "Cherry", "d" => "Date");
 
-$randomkeys=array_rand($fruits,2);
+$randomkeys = array_rand($fruits, 2);
 
- echo "<pre>";
+echo "<pre>";
 print_r($randomkeys);
- echo "/<pre>";
+echo "</pre>";
 
+echo $fruits[$randomkeys[0]] . "<br>";
+echo $fruits[$randomkeys[1]] . "<br>";
      // Shuffle
  
 $name = ["Mudabbir", "Ali", "Ahmed", "Zain", "Hamza"];
@@ -146,19 +151,20 @@ $name = ["Mudabbir", "Ali", "Ahmed", "Zain", "Hamza"];
 shuffle($name); // Random order mein names arrange ho jaayenge
 
 print_r($name);
+echo "<br>";
 
 
      //array_fill()
 
 
-$filledArray = array_fill(2, 5, 'apple');
+$filledArray = array_fill(1, 5, 'apple');
 print_r($filledArray);
 
 
     // Array_fill_keys()
 
 
-$keys = [1, 2, 3, 4];
+$keys = ["a", "b", "c", "d"];
 $filledArray = array_fill_keys($keys, 'pending');
 print_r($filledArray);
 
