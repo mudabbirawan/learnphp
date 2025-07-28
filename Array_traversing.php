@@ -118,7 +118,7 @@ $array=str_split($str);
  echo "<pre>";
 print_r($array);
  echo "</pre>";
-
+    //chunk
 
 $str = "yahoo baba";
 
